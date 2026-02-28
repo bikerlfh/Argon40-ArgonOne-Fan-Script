@@ -131,7 +131,7 @@ do
         fanspeed="${SPEED4_HEX}"
     fi
 
-    i2cset -y 1 0x1a \$fanspeed
+    i2cset -y 1 0x1a 0x80 \$fanspeed b
     sleep \$sleeptime
 done
 EOF

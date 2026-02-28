@@ -11,6 +11,6 @@ do
     elif [ $cputemp -ge 65000 ]; then
         fanspeed="0x64"
     fi
-    i2cget -y 1 0x01a $fanspeed
+    i2cget -y 1 0x01a 0x80 $fanspeed b
     sleep $sleeptime
 done
